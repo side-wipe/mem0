@@ -1,169 +1,234 @@
-<p align="center">
-  <a href="https://github.com/mem0ai/mem0">
-    <img src="docs/images/banner-sm.png" width="800px" alt="Mem0 - The Memory Layer for Personalized AI">
-  </a>
-</p>
-<p align="center" style="display: flex; justify-content: center; gap: 20px; align-items: center;">
-  <a href="https://trendshift.io/repositories/11194" target="blank">
-    <img src="https://trendshift.io/api/badge/repositories/11194" alt="mem0ai%2Fmem0 | Trendshift" width="250" height="55"/>
-  </a>
-</p>
+<div align="center">
 
-<p align="center">
-  <a href="https://mem0.ai">Learn more</a>
-  ·
-  <a href="https://mem0.dev/DiG">Join Discord</a>
-  ·
-  <a href="https://mem0.dev/demo">Demo</a>
-  ·
-  <a href="https://mem0.dev/openmemory">OpenMemory</a>
-</p>
+![MemU Banner](assets/banner.png)
 
-<p align="center">
-  <a href="https://mem0.dev/DiG">
-    <img src="https://img.shields.io/badge/Discord-%235865F2.svg?&logo=discord&logoColor=white" alt="Mem0 Discord">
-  </a>
-  <a href="https://pepy.tech/project/mem0ai">
-    <img src="https://img.shields.io/pypi/dm/mem0ai" alt="Mem0 PyPI - Downloads">
-  </a>
-  <a href="https://github.com/mem0ai/mem0">
-    <img src="https://img.shields.io/github/commit-activity/m/mem0ai/mem0?style=flat-square" alt="GitHub commit activity">
-  </a>
-  <a href="https://pypi.org/project/mem0ai" target="blank">
-    <img src="https://img.shields.io/pypi/v/mem0ai?color=%2334D058&label=pypi%20package" alt="Package version">
-  </a>
-  <a href="https://www.npmjs.com/package/mem0ai" target="blank">
-    <img src="https://img.shields.io/npm/v/mem0ai" alt="Npm package">
-  </a>
-  <a href="https://www.ycombinator.com/companies/mem0">
-    <img src="https://img.shields.io/badge/Y%20Combinator-S24-orange?style=flat-square" alt="Y Combinator S24">
-  </a>
-</p>
+### MemU: The Next-Gen Memory Framework for AI Companions
 
-<p align="center">
-  <a href="https://mem0.ai/research"><strong>📄 Building Production-Ready AI Agents with Scalable Long-Term Memory →</strong></a>
-</p>
-<p align="center">
-  <strong>⚡ +26% Accuracy vs. OpenAI Memory • 🚀 91% Faster • 💰 90% Fewer Tokens</strong>
-</p>
+[![PyPI version](https://badge.fury.io/py/memu.svg)](https://badge.fury.io/py/memu)
+[![License: Apache 2.0](https://img.shields.io/badge/License-Apache%202.0-blue.svg)](https://opensource.org/licenses/Apache-2.0)
+[![Python 3.8+](https://img.shields.io/badge/python-3.8+-blue.svg)](https://www.python.org/downloads/)
+[![Discord](https://img.shields.io/badge/Discord-Join%20Chat-5865F2?logo=discord&logoColor=white)](https://discord.gg/memu)
+[![Twitter](https://img.shields.io/badge/Twitter-Follow-1DA1F2?logo=x&logoColor=white)](https://x.com/memU_ai)
+[![Reddit](https://img.shields.io/badge/Reddit-Join%20Community-FF4500?logo=reddit&logoColor=white)](https://www.reddit.com/r/memU_ai)
+[![WeChat](https://img.shields.io/badge/WeChat-WeChat%20Group-07C160?logo=wechat&logoColor=white)](assets/wechat/wechat1.png)
+</div>
 
-##  🔥 Research Highlights
-- **+26% Accuracy** over OpenAI Memory on the LOCOMO benchmark
-- **91% Faster Responses** than full-context, ensuring low-latency at scale
-- **90% Lower Token Usage** than full-context, cutting costs without compromise
-- [Read the full paper](https://mem0.ai/research)
+**MemU** is an open-source memory framework for AI companions—high accuracy, fast retrieval, low cost. It acts as an intelligent "memory folder" that adapts to different AI companion scenarios.
 
-# Introduction
+ With **memU**, you can build AI companions that truly remember you. They learn who you are, what you care about, and grow alongside you through every interaction. 
 
-[Mem0](https://mem0.ai) ("mem-zero") enhances AI assistants and agents with an intelligent memory layer, enabling personalized AI interactions. It remembers user preferences, adapts to individual needs, and continuously learns over time—ideal for customer support chatbots, AI assistants, and autonomous systems.
+ Visit our homepage: [memu.pro](https://memu.pro/)
 
-### Key Features & Use Cases
+### 🥇 92% Accuracy - 💰 90% Cost Reduction - 🤖 AI Companion Specialized
+- ✅ **AI Companion Specialization** - Adapt to AI companions application
+- ✅ **92% Accuracy** - State-of-the-art score in Locomo benchmark
+- ✅ **Up to 90% Cost Reduction** - Through optimized online platform
+- ✅ **Advanced Retrieval Strategies** - Multiple methods including semantic search, hybrid search, contextual retrieval
+- ✅ **24/7 Support** - For enterprise customers
 
-**Core Capabilities:**
-- **Multi-Level Memory**: Seamlessly retains User, Session, and Agent state with adaptive personalization
-- **Developer-Friendly**: Intuitive API, cross-platform SDKs, and a fully managed service option
+---
 
-**Applications:**
-- **AI Assistants**: Consistent, context-rich conversations
-- **Customer Support**: Recall past tickets and user history for tailored help
-- **Healthcare**: Track patient preferences and history for personalized care
-- **Productivity & Gaming**: Adaptive workflows and environments based on user behavior
+## ⭐ Star Us on GitHub
 
-## 🚀 Quickstart Guide <a name="quickstart"></a>
+Star MemU to get notified about new releases and join our growing community of AI developers building intelligent agents with persistent memory capabilities.
 
-Choose between our hosted platform or self-hosted package:
+![star-us](./assets/star.gif)
 
-### Hosted Platform
+**💬 Join our Discord community:** [https://discord.gg/memu](https://discord.gg/memu)
 
-Get up and running in minutes with automatic updates, analytics, and enterprise security.
+---
 
-1. Sign up on [Mem0 Platform](https://app.mem0.ai)
-2. Embed the memory layer via SDK or API keys
+## 🚀Get Started
 
-### Self-Hosted (Open Source)
+There are three ways to get started with MemU:
 
-Install the sdk via pip:
+### ☁️ Cloud Version ([Online Platform](https://app.memu.so))
 
-```bash
-pip install mem0ai
-```
+The fastest way to integrate your application with memU. Perfect for teams and individuals who want immediate access without setup complexity. We host the models, APIs, and cloud storage, ensuring your application gets the best quality AI memory.
 
-Install sdk via npm:
-```bash
-npm install mem0ai
-```
+- **Instant Access** - Start integrating AI memories in minutes
+- **Managed Infrastructure** - We handle scaling, updates, and maintenance for optimal memory quality
+- **Premium Support** - Subscribe and get priority assistance from our engineering team
 
-### Basic Usage
+### Step-by-step
 
-Mem0 requires an LLM to function, with `gpt-4o-mini` from OpenAI as the default. However, it supports a variety of LLMs; for details, refer to our [Supported LLMs documentation](https://docs.mem0.ai/components/llms/overview).
+**Step 1:** Create account
 
-First step is to instantiate the memory:
+Create account on https://app.memu.so
 
+Then, go to https://app.memu.so/api-key/ for generating api-keys.
+
+**Step 2:** Add three lines to your code
 ```python
-from openai import OpenAI
-from mem0 import Memory
+pip install memu-py
 
-openai_client = OpenAI()
-memory = Memory()
-
-def chat_with_memories(message: str, user_id: str = "default_user") -> str:
-    # Retrieve relevant memories
-    relevant_memories = memory.search(query=message, user_id=user_id, limit=3)
-    memories_str = "\n".join(f"- {entry['memory']}" for entry in relevant_memories["results"])
-
-    # Generate Assistant response
-    system_prompt = f"You are a helpful AI. Answer the question based on query and memories.\nUser Memories:\n{memories_str}"
-    messages = [{"role": "system", "content": system_prompt}, {"role": "user", "content": message}]
-    response = openai_client.chat.completions.create(model="gpt-4o-mini", messages=messages)
-    assistant_response = response.choices[0].message.content
-
-    # Create new memories from the conversation
-    messages.append({"role": "assistant", "content": assistant_response})
-    memory.add(messages, user_id=user_id)
-
-    return assistant_response
-
-def main():
-    print("Chat with AI (type 'exit' to quit)")
-    while True:
-        user_input = input("You: ").strip()
-        if user_input.lower() == 'exit':
-            print("Goodbye!")
-            break
-        print(f"AI: {chat_with_memories(user_input)}")
-
-if __name__ == "__main__":
-    main()
+# Example usage
+from memu import MemuClient
 ```
 
-For detailed integration steps, see the [Quickstart](https://docs.mem0.ai/quickstart) and [API Reference](https://docs.mem0.ai/api-reference).
-
-## 🔗 Integrations & Demos
-
-- **ChatGPT with Memory**: Personalized chat powered by Mem0 ([Live Demo](https://mem0.dev/demo))
-- **Browser Extension**: Store memories across ChatGPT, Perplexity, and Claude ([Chrome Extension](https://chromewebstore.google.com/detail/onihkkbipkfeijkadecaafbgagkhglop?utm_source=item-share-cb))
-- **Langgraph Support**: Build a customer bot with Langgraph + Mem0 ([Guide](https://docs.mem0.ai/integrations/langgraph))
-- **CrewAI Integration**: Tailor CrewAI outputs with Mem0 ([Example](https://docs.mem0.ai/integrations/crewai))
-
-## 📚 Documentation & Support
-
-- Full docs: https://docs.mem0.ai
-- Community: [Discord](https://mem0.dev/DiG) · [Twitter](https://x.com/mem0ai)
-- Contact: founders@mem0.ai
-
-## Citation
-
-We now have a paper you can cite:
-
-```bibtex
-@article{mem0,
-  title={Mem0: Building Production-Ready AI Agents with Scalable Long-Term Memory},
-  author={Chhikara, Prateek and Khant, Dev and Aryan, Saket and Singh, Taranjeet and Yadav, Deshraj},
-  journal={arXiv preprint arXiv:2504.19413},
-  year={2025}
-}
+**Step 3:** Quick Start
+```python
+# Initialize
+memu_client = MemuClient(
+    base_url="https://api.memu.so", 
+    api_key=os.getenv("MEMU_API_KEY")
+)
+memu_client.memorize_conversation(
+    conversation=conversation_text, # Recommend longer conversation (~8000 tokens), see https://memu.pro/blog/memu-best-practice for details
+    user_id="user001", 
+    user_name="User", 
+    agent_id="assistant001", 
+    agent_name="Assistant"
+)
 ```
+Check [API reference](docs/API_REFERENCE.md) or [our blog](https://memu.pro/blog) for more details. 
 
-## ⚖️ License
+📖 **See [`example/client/memory.py`](example/client/memory.py) for complete integration details**
 
-Apache 2.0 — see the [LICENSE](LICENSE) file for details.
+✨ **That's it!** MemU remembers everything and helps your AI learn from past conversations.
+
+
+### 🏢 Enterprise Edition
+
+For organizations requiring maximum security, customization, control and best quality:
+
+- **Commercial License** - Full proprietary features, commercial usage rights, white-labeling options
+- **Custom Development** - SSO/RBAC integration, dedicated algorithm team for scenario-specific framework optimization
+- **Intelligence & Analytics** - User behavior analysis, real-time production monitoring, automated agent optimization
+- **Premium Support** - 24/7 dedicated support, custom SLAs, professional implementation services
+
+📧 **Enterprise Inquiries:** [contact@nevamind.ai](mailto:contact@nevamind.ai)
+
+
+### 🏠 Self-Hosting (Community Edition)
+For users and developers who prefer local control, data privacy, or customization:
+
+* **Data Privacy** - Keep sensitive data within your infrastructure
+* **Customization** - Modify and extend the platform to fit your needs
+* **Cost Control** - Avoid recurring cloud fees for large-scale deployments
+
+See [self hosting README](README.self_host.md)
+
+---
+
+
+## ✨ Key Features
+
+### 🎥 Demo Video
+
+<div align="left">
+  <a href="https://www.youtube.com/watch?v=qZIuCoLglHs">
+    <img src="https://img.youtube.com/vi/ueOe4ZPlZLU/maxresdefault.jpg" alt="MemU Demo Video" width="600">
+  </a>
+  <br>
+  <em>Click to watch the MemU demonstration video</em>
+</div>
+
+---
+
+### Memory as file system
+
+#### **Organize** - Autonomous Memory File Management
+Your memories are structured as intelligent folders managed by a memory agent. We do not do explicit modeling for memories. The memory agent automatically decides what to record, modify, or archive. Think of it as having a personal librarian who knows exactly how to organize your thoughts.
+
+#### **Link** - Interconnected Knowledge Graph
+Memories don't exist in isolation. Our system automatically creates meaningful connections between related memories, building a rich network of hyperlinked documents and transforming memory discovery from search into effortless recall.
+
+#### **Evolve** - Continuous Self-Improvement
+Even when offline, your memory agent keeps working. It generates new insights by analyzing existing memories, identifies patterns, and creates summary documents through self-reflection. Your knowledge base becomes smarter over time, not just larger.
+
+#### **Never Forget** - Adaptive Forgetting Mechanism
+The memory agent automatically prioritizes information based on usage patterns. Recently accessed memories remain highly accessible, while less relevant content is deprioritized or forgotten. This creates a personalized information hierarchy that evolves with your needs.
+
+---
+
+## 😺 Advantages
+
+### Higher Memory Accuracy
+MemU achieves 92.09% average accuracy in Locomo dataset across all reasoning tasks, significantly outperforming competitors. Technical Report will be published soon!
+
+![Memory Accuracy Comparison](assets/benchmark.png)
+<em>(1) Single-hop questions require answers based on a single session; (2) Multi-hop questions require synthesizing information from multiple different sessions; (3) Temporal reasoning questions can be answered through temporal reasoning and capturing time-related data cues within the conversation; (4) Open-domain knowledge questions can be answered by integrating a speaker’s provided information with external knowledge such as commonsense or world facts; </em>
+
+### Fast Retrieval
+
+We categorize important information into documents, and during retrieval, we only need to find the relevant document content, eliminating the need for extensive embedding searches for fragmented sentences.
+
+### Low cost
+
+We can process hundreds of conversation turns at once, eliminating the need for developers to repeatedly call memory functions, thus saving users from wasting tokens on multiple memory operations. See [best practice](https://memu.pro/blog/memu-best-practice).
+
+---
+## 🎓 **Use Cases**
+
+| | | | |
+|:---:|:---:|:---:|:---:|
+| <img src="assets/usecase/ai_companion-0000.jpg" width="150" height="200"><br>**AI Companion** | <img src="assets/usecase/ai_role_play-0000.jpg" width="150" height="200"><br>**AI Role Play** | <img src="assets/usecase/ai_ip-0000.png" width="150" height="200"><br>**AI IP Characters** | <img src="assets/usecase/ai_edu-0000.jpg" width="150" height="200"><br>**AI Education** |
+| <img src="assets/usecase/ai_therapy-0000.jpg" width="150" height="200"><br>**AI Therapy** | <img src="assets/usecase/ai_robot-0000.jpg" width="150" height="200"><br>**AI Robot** | <img src="assets/usecase/ai_creation-0000.jpg" width="150" height="200"><br>**AI Creation** | More...|
+---
+
+## 🤝 Contributing
+
+We build trust through open-source collaboration. Your creative contributions drive memU's innovation forward. Explore our GitHub issues and projects to get started and make your mark on the future of memU.
+
+📋 **[Read our detailed Contributing Guide →](CONTRIBUTING.md)**
+
+
+### **📄 License**
+
+By contributing to MemU, you agree that your contributions will be licensed under the **Apache License 2.0**.
+
+---
+
+## 🌍 Community
+For more information please contact info@nevamind.ai
+
+- **GitHub Issues:** Report bugs, request features, and track development. [Submit an issue](https://github.com/NevaMind-AI/memU/issues)
+
+- **Discord:** Get real-time support, chat with the community, and stay updated. [Join us](https://discord.com/invite/hQZntfGsbJ)
+
+- **X (Twitter):** Follow for updates, AI insights, and key announcements. [Follow us](https://x.com/memU_ai)
+
+---
+
+## 🤝 Ecosystem
+
+We're proud to work with amazing organizations:
+
+<div align="center">
+
+### Development Tools
+<a href="https://github.com/TEN-framework/ten-framework"><img src="https://avatars.githubusercontent.com/u/113095513?s=200&v=4" alt="Ten" height="40" style="margin: 10px;"></a>
+<a href="https://github.com/camel-ai/camel"><img src="https://avatars.githubusercontent.com/u/134388954?s=200&v=4" alt="Camel" height="40" style="margin: 10px;"></a>
+<a href="https://github.com/eigent-ai/eigent"><img src="https://www.eigent.ai/nav/logo_icon.svg" alt="Eigent" height="40" style="margin: 10px;"></a>
+<a href="https://github.com/milvus-io/milvus"><img src="https://miro.medium.com/v2/resize:fit:2400/1*-VEGyAgcIBD62XtZWavy8w.png" alt="Ten" height="40" style="margin: 10px;"></a>
+<a href="https://xroute.ai/"><img src="assets/partners/xroute.png" alt="xRoute" height="40" style="margin: 10px;"></a>
+<a href="https://jaaz.app/"><img src="assets/partners/jazz.png" alt="jazz" height="40" style="margin: 10px;"></a>
+<a href="https://github.com/Buddie-AI/Buddie"><img src="assets/partners/buddie.png" alt="buddie" height="40" style="margin: 10px;"></a>
+<a href="https://github.com/bytebase/bytebase"><img src="assets/partners/bytebase.png" alt="bytebase" height="40" style="margin: 10px;"></a>
+</div>
+
+---
+
+*Interested in partnering with MemU? Contact us at [contact@nevamind.ai](mailto:contact@nevamind.ai)*
+
+---
+
+## 📱 Join Our WeChat Community
+
+Connect with us on WeChat for the latest updates, community discussions, and exclusive content:
+
+<div align="center">
+
+### WeChat QR Codes
+
+<img src="assets/wechat/wechat1.png" alt="MemU WeChat QR Code 1" width="180" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px;">
+<img src="assets/wechat/wechat2.png" alt="MemU WeChat QR Code 2" width="180" style="border-radius: 10px; box-shadow: 0 4px 8px rgba(0,0,0,0.1); margin: 10px;">
+
+*Scan any of the QR codes above to join our WeChat community*
+
+</div>
+
+---
+
+*Stay connected with the MemU community! Join our WeChat groups for real-time discussions, technical support, and networking opportunities.*
