@@ -9,7 +9,9 @@ import os
 import time
 from typing import List, Optional
 
+from langchain_openai import OpenAIEmbeddings
 
+from ..maas.embedding import VolcEngineMaasEmbeddingV3
 from ..utils import get_logger
 
 logger = get_logger(__name__)
@@ -128,6 +130,10 @@ class EmbeddingClient:
                 self._init_sentence_transformers_client(model_name, **init_kwargs)
             elif model_type == "local":
                 self._init_local_client(model_name, **init_kwargs)
+            elif model_type == "volc":
+                self._init_volc_client(model_name, **init_kwargs)
+            elif model_type == "langchain":
+                self._init_langchain_client(model_name, **init_kwargs)
             else:
                 # Fallback: try to create sentence-transformers client
                 try:
@@ -241,6 +247,72 @@ class EmbeddingClient:
             
         except Exception as e:
             logger.error(f"Failed to initialize local embedding client from {model_path}: {e}")
+            raise
+
+    def _init_volc_client(self, model_name: str, **kwargs):
+        """Initialize volc embedding model client"""
+        try:
+            api_key = kwargs.get("api_key")
+            base_url = kwargs.get("base_url")
+            endpoint_id = kwargs.get("endpoint_id")
+            model = VolcEngineMaasEmbeddingV3(
+                api_key=api_key,
+                endpoint_id=endpoint_id,
+                api_base=base_url,
+            )
+
+            class VolcEmbeddingClient:
+                def __init__(self, model):
+                    self.model = model
+
+                def embed(self, text: str) -> List[float]:
+                    logger.info(f"volc embedding client embed start......: {text}")
+                    embedding = self.model.embed_query(text=text)
+                    logger.info(f"volc embedding client embed end: {embedding}")
+                    return model.embed_query(text=text)
+
+            self.client = VolcEmbeddingClient(model)
+            logger.info(f"langchain embedding client initialized from path: {model_name}")
+
+        except Exception as e:
+            logger.error(f"Failed to initialize langchain embedding client from {model_name}: {e}")
+            raise
+
+
+    def _init_langchain_client(self, model_name: str, **kwargs):
+        """Initialize langchain embedding model client"""
+        try:
+            api_key = kwargs.get("api_key")
+            base_url = kwargs.get("base_url")
+            model = OpenAIEmbeddings(
+                api_key=api_key,
+                base_url=base_url,
+                model=model_name,
+                model_kwargs={
+                    "encoding_format": "float",
+                },
+            )
+
+            class LangchainEmbeddingClient:
+                def __init__(self, model):
+                    self.model = model
+
+                def embed(self, text: str) -> List[float]:
+                    if not isinstance(text, str):
+                        logger.error(f"输入不是字符串，实际类型: {type(text)}, 值: {text}")
+                        raise TypeError("输入必须是字符串")
+                    if isinstance(model, OpenAIEmbeddings):
+                        logger.info(f"langchain embedding client embed start......: {text}")
+                        embedding = self.model.embed_query(text=text)
+                        logger.info(f"langchain embedding client embed end: {embedding}")
+                        return embedding.tolist()
+                    return model.embed_query(text=text)
+
+            self.client = LangchainEmbeddingClient(model)
+            logger.info(f"langchain embedding client initialized from path: {model_name}")
+
+        except Exception as e:
+            logger.error(f"Failed to initialize langchain embedding client from {model_name}: {e}")
             raise
 
     def embed(self, text: str) -> List[float]:
@@ -451,6 +523,9 @@ def get_default_embedding_client() -> Optional[EmbeddingClient]:
     # Custom embedding specific configurations
     model_type = os.getenv("MEMU_EMBEDDING_MODEL_TYPE", "sentence_transformers")
     device = os.getenv("MEMU_EMBEDDING_DEVICE", "cpu")
+    base_url = os.getenv("MEMU_EMBEDDING_BASE_URL")
+    api_key = os.getenv("MENU_EMBEDDING_API_KEY")
+    endpoint_id = os.getenv("MENU_EMBEDDING_ENDPOINT_ID")
 
     logger.info(f"Embedding provider: {embedding_provider}")
     logger.info(f"Embedding model: {embedding_model}")
@@ -465,6 +540,9 @@ def get_default_embedding_client() -> Optional[EmbeddingClient]:
                 model=embedding_model,
                 model_type=model_type,
                 model_name=embedding_model,
+                base_url=base_url,
+                api_key=api_key,
+                endpoint_id=endpoint_id,
                 device=device
             )
         except Exception as e:

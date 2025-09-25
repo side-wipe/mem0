@@ -47,12 +47,12 @@ Required configuration:
 python -m memu.server.cli start
 
 # Or directly with uvicorn
-uvicorn memu.server.main:app --host 0.0.0.0 --port 8000
+uvicorn memu.server.main:app --host 0.0.0.0 --port 8090
 ```
 
 ### 4. Test API
 
-Open http://localhost:8000/docs for interactive API documentation.
+Open http://localhost:8090/docs for interactive API documentation.
 
 ## API Endpoints
 
@@ -74,7 +74,7 @@ Open http://localhost:8000/docs for interactive API documentation.
 | Variable | Description | Default |
 |----------|-------------|---------|
 | `MEMU_HOST` | Server host | `0.0.0.0` |
-| `MEMU_PORT` | Server port | `8000` |
+| `MEMU_PORT` | Server port | `8090` |
 | `MEMU_DEBUG` | Debug mode | `false` |
 | `MEMU_MEMORY_DIR` | Memory storage directory | `./memu/server/memory` |
 | `MEMU_LLM_PROVIDER` | LLM provider (openai/anthropic/deepseek) | `openai` |
@@ -107,7 +107,7 @@ MEMU_DEEPSEEK_MODEL=deepseek-chat
 from memu import MemuClient
 
 # Initialize client
-client = MemuClient(base_url="http://localhost:8000")
+client = MemuClient(base_url="http://localhost:8090")
 
 # Memorize conversation
 response = client.memorize_conversation(
@@ -138,7 +138,7 @@ print(f"Found {len(memories.related_memories)} related memories")
 
 ```bash
 # Memorize conversation
-curl -X POST "http://localhost:8000/api/v1/memory/memorize" \
+curl -X POST "http://localhost:8090/api/v1/memory/memorize" \
   -H "Content-Type: application/json" \
   -d '{
     "conversation_text": "User: Hello\nAssistant: Hi there!",
@@ -149,10 +149,10 @@ curl -X POST "http://localhost:8000/api/v1/memory/memorize" \
   }'
 
 # Check task status
-curl "http://localhost:8000/api/v1/memory/memorize/status/{task_id}"
+curl "http://localhost:8090/api/v1/memory/memorize/status/{task_id}"
 
 # Search memories
-curl -X POST "http://localhost:8000/api/v1/memory/retrieve/related-memory-items" \
+curl -X POST "http://localhost:8090/api/v1/memory/retrieve/related-memory-items" \
   -H "Content-Type: application/json" \
   -d '{
     "user_id": "user123",
@@ -207,7 +207,7 @@ COPY . .
 
 RUN pip install -e ".[server]"
 
-EXPOSE 8000
+EXPOSE 8090
 CMD ["python", "-m", "memu.server.cli", "start"]
 ```
 

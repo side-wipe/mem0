@@ -125,7 +125,6 @@ name = "byted"
 url = "https://bytedpypi.byted.org/simple/"
 priority = "primary"
 
-
 [[tool.poetry.source]]
 name = "byted"
 url = "https://pypi.org/simple"
@@ -162,7 +161,7 @@ license-files = []
 ]
 
 [tool.mypy]
-python_version = "3.12"
+python_version = "3.9"
 warn_return_any = true
 warn_unused_configs = true
 disallow_untyped_defs = true

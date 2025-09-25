@@ -189,7 +189,7 @@ docker-compose up -d
 **Option C: Custom build**
 ```bash
 # Build with specific options first
-docker build -t memu:custom \
+docker build --no-cache -t memu:custom \
   --build-arg INSTALL_MODE=server \
   --build-arg INCLUDE_GPU=false \
   .

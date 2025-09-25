@@ -24,7 +24,7 @@ def _get_bool_env(name: str, default: bool = False) -> bool:
 def start_server():
     """Start the MemU server (configuration via environment variables only)"""
     host = os.getenv("MEMU_HOST", "0.0.0.0")
-    port = int(os.getenv("MEMU_PORT", "8000"))
+    port = int(os.getenv("MEMU_PORT", "8090"))
     debug = _get_bool_env("MEMU_DEBUG", False)
     memory_dir = os.getenv("MEMU_MEMORY_DIR", "memu/server/memory")
     llm_provider = os.getenv("MEMU_LLM_PROVIDER", "openai").lower()

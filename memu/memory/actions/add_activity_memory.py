@@ -197,10 +197,14 @@ Transform this raw content into properly formatted activity memory items followi
 Transform the raw content into properly formatted activity memory items (ONE MEANINGFUL ACTIVITY PER LINE):
 
 """
-
+        logger.warning(
+                        f"test-log:format content with llm prompt : {format_prompt}"
+                    )
         # Call LLM to format content
         cleaned_content = self.llm_client.simple_chat(format_prompt)
-
+        logger.warning(
+            f"test-log:content of llm response : {cleaned_content}"
+        )
         return cleaned_content
 
     def _add_memory_ids_with_timestamp(
@@ -271,7 +275,9 @@ Transform the raw content into properly formatted activity memory items (ONE MEA
 
                 try:
                     embedding_vector = self.embedding_client.embed(item["content"])
-                    
+                    logger.warning(
+                        f"test-log:generate embedding for memory item embedding_vector: {embedding_vector}"
+                    )
                     new_item_id = (
                         f"{character_name}_{category}_item_{len(existing_embeddings)}"
                     )
